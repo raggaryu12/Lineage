@@ -34,8 +34,9 @@
 
   .plate{position:relative;height:96vh;min-height:540px;overflow:hidden;display:flex;align-items:flex-end;border-bottom:1px solid rgba(0,0,0,0)}
   .plate.hide{display:none}
-  .plate .meta{position:relative;z-index:4;padding:0 var(--pad) clamp(44px,8vh,86px);width:100%;max-width:var(--maxw);margin:0 auto;
-    display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+  .plate .meta{position:relative;z-index:4;padding:clamp(60px,10vh,120px) var(--pad) clamp(44px,8vh,86px);width:100%;max-width:var(--maxw);margin:0 auto;
+    display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
+    background:linear-gradient(to top,rgba(8,7,6,0.82) 0%,rgba(8,7,6,0.3) 60%,transparent 100%)}
   .plate.right .meta{flex-direction:row-reverse;text-align:right}
   .plate .meta .l .series{font-family:var(--display);font-size:11.5px;letter-spacing:.24em;color:var(--ink-mute);text-transform:uppercase;margin-bottom:16px;display:block;text-shadow:0 1px 6px rgba(0,0,0,0.9)}
   .plate .meta .l .series .lng-jp{font-family:"Noto Sans JP",var(--sans);letter-spacing:.14em}
