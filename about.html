@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — Takuma Watanabe</title>
+<script>try{if((localStorage.getItem('tw-lang')||'en')==='jp')document.documentElement.classList.add('lang-jp');}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Archivo+Expanded:wght@200;300;400&family=Hanken+Grotesk:wght@300;400;500&family=Noto+Sans+JP:wght@200;300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css" />
+<style>
+  .ahero{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;align-items:stretch}
+  .ahero .img{position:relative;overflow:hidden;min-height:60vh}
+  .ahero .img .bleed{inset:-8% 0}
+  .ahero .img .vg{position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(120% 120% at 50% 50%,transparent 58%,rgba(8,7,6,.5))}
+  .ahero .body{display:flex;flex-direction:column;justify-content:center;padding:24vh var(--pad) 12vh;border-left:1px solid var(--line)}
+  .ahero .body .micro{margin-bottom:30px}
+  .ahero .body h1{font-family:var(--display);font-weight:200;font-size:clamp(38px,5vw,80px);line-height:0.96;letter-spacing:-0.02em;margin-bottom:14px}
+  .ahero .body h1 .lng-jp{font-family:"Noto Sans JP",var(--sans);font-weight:200;letter-spacing:0.04em}
+  .ahero .body .sub{font-size:clamp(15px,1.5vw,19px);color:var(--ink-mute);line-height:1.7;max-width:34ch}
+  .ahero .body .sub .lng-jp{line-height:1.95}
+
+  .bio{max-width:760px;margin:0 auto;padding:14vh var(--pad)}
+  .bio p{font-size:clamp(16px,1.6vw,21px);line-height:1.95;color:var(--ink);margin-bottom:2em;font-weight:300}
+  .bio p .mute{color:var(--ink-mute)}
+  .bio p .lng-jp{line-height:2.15}
+  .bio p.lead{font-family:var(--display);font-weight:200;font-size:clamp(21px,2.5vw,32px);line-height:1.42;letter-spacing:-0.01em}
+  .bio p.lead .lng-jp{font-family:"Noto Sans JP",var(--sans);font-weight:200;line-height:1.75}
+
+  .details{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .details .grid{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+  .details .cell{padding:7vh var(--pad);border-left:1px solid var(--line-soft)}
+  .details .cell:first-child{border-left:0}
+  .details .cell .micro{margin-bottom:18px}
+  .details .cell .v{font-family:var(--display);font-weight:300;font-size:clamp(18px,1.8vw,23px);letter-spacing:-0.01em;line-height:1.2}
+  .details .cell .v .lng-jp{font-family:"Noto Sans JP",var(--sans);font-weight:300}
+  .details .cell .vsub{font-size:13px;color:var(--ink-mute);margin-top:8px}
+
+  .closeplate{position:relative;height:90vh;min-height:480px;overflow:hidden;display:flex;align-items:flex-end}
+  .closeplate .meta{position:relative;z-index:4;padding:0 var(--pad) clamp(44px,8vh,86px);max-width:var(--maxw);margin:0 auto;width:100%}
+  .closeplate .meta .pl{font-family:var(--display);font-size:11.5px;letter-spacing:.24em;color:var(--ink-mute);display:block;margin-bottom:14px}
+  .closeplate .meta .pl .lng-jp{font-family:"Noto Sans JP",var(--sans);letter-spacing:.14em}
+  .closeplate .meta h2{font-family:var(--display);font-weight:200;font-size:clamp(26px,3.6vw,52px);line-height:1.04;letter-spacing:-0.018em;max-width:18ch}
+  .closeplate .meta h2 .lng-jp{font-family:"Noto Sans JP",var(--sans);font-weight:200;line-height:1.4}
+
+  @media(max-width:880px){
+    .ahero{grid-template-columns:1fr}
+    .ahero .img{order:1;min-height:60vh}
+    .ahero .body{order:2;border-left:0;border-top:1px solid var(--line);padding-top:10vh}
+    .details .grid{grid-template-columns:1fr 1fr}
+    .details .cell{border-left:0;border-top:1px solid var(--line-soft)}
+    .details .cell:nth-child(odd){border-left:0}
+    .details .cell:nth-child(even){border-left:1px solid var(--line-soft)}
+  }
+</style>
+</head>
+<body class="page-about">
+
+<header class="nav" id="nav">
+  <a class="wordmark" href="index.html">Takuma Watanabe<span class="jp">渡辺琢真</span></a>
+  <div class="nav-right">
+    <nav class="nav-links">
+      <a href="index.html"><span class="lng-en">Home</span><span class="lng-jp">ホーム</span></a>
+      <a href="works.html"><span class="lng-en">Works</span><span class="lng-jp">作品</span></a>
+      <a href="projects.html"><span class="lng-en">Projects</span><span class="lng-jp">プロジェクト</span></a>
+      <a href="concept.html"><span class="lng-en">Concept</span><span class="lng-jp">コンセプト</span></a>
+      <a href="about.html" aria-current="page"><span class="lng-en">About</span><span class="lng-jp">について</span></a>
+    </nav>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" data-setlang="en" class="on">EN</button>
+      <span class="sep">/</span>
+      <button type="button" data-setlang="jp">JP</button>
+    </div>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="ahero">
+    <div class="img">
+      <div class="bleed" data-parallax="0.12"><img src="art/portrait-art.webp" alt="Untitled — Portrait in Art" /></div>
+      <div class="vg"></div>
+    </div>
+    <div class="body">
+      <div class="micro reveal"><span class="lng-en">About the artist</span><span class="lng-jp">作家について</span></div>
+      <h1 class="reveal"><span class="lng-en">Takuma<br />Watanabe</span><span class="lng-jp">渡辺<br />琢真</span></h1>
+      <p class="sub reveal">
+        <span class="lng-en">Japanese abstract painter (b. 1985), exploring light as a lived dimension of perception.</span>
+        <span class="lng-jp">光を知覚の生きた次元として探求する、日本の抽象画家（1985年生まれ）。</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- BIO -->
+  <section class="bio">
+    <p class="lead reveal">
+      <span class="lng-en">Takuma Watanabe is a Japanese abstract painter exploring light as a lived dimension of perception. Rather than treating light as illumination, he approaches it as a field in which silence, breath, and time accumulate.</span>
+      <span class="lng-jp">渡辺琢真（1985年生まれ）は、光を知覚の生きた次元として探求する日本の抽象画家です。光を照明として捉えるのではなく、沈黙、息吹、時間が積層する場として接近します。</span>
+    </p>
+    <p class="reveal">
+      <span class="lng-en">His paintings construct perceptual spaces where conscious and unconscious awareness converge prior to conceptual distinction. <span class="mute">Working between Japan and the United States, Watanabe engages the lineage of modern abstraction while extending beyond formal reduction.</span></span>
+      <span class="lng-jp">彼の絵画は、意識と無意識の気づきが概念的区別に先立って収束する、知覚的空間を構築します。<span class="mute">日本とアメリカを拠点に活動する渡辺は、近代抽象の系譜に関わりながら、形式的還元を超えて展開します。</span></span>
+    </p>
+    <p class="reveal">
+      <span class="lng-en">Informed by both Western painting traditions and Eastern philosophical thought, his practice is grounded in an undivided and transparent awareness — an openness in which distinctions have yet to solidify.</span>
+      <span class="lng-jp">西洋絵画の伝統と東洋哲学思想の両方に影響を受け、その実践は未分割で透明な気づき——区別がいまだ固まっていない開かれた状態——に根ざしています。</span>
+    </p>
+    <p class="reveal">
+      <span class="lng-en">Through layered surfaces of color, pigment functions as sedimented time — <span class="mute">an accumulation of gesture, erasure, and interval. For Watanabe, painting is not representation, but an emergence from this open field.</span></span>
+      <span class="lng-jp">色彩を重ねた表面において、顔料は堆積した時間として機能します——身振り、消去、間隔の積み重ね。<span class="mute">渡辺にとって、絵画は表現ではなく、この開かれた場から生まれ出るものです。</span></span>
+    </p>
+  </section>
+
+  <!-- DETAILS -->
+  <section class="details">
+    <div class="grid">
+      <div class="cell reveal"><div class="micro"><span class="lng-en">Born</span><span class="lng-jp">生年</span></div><div class="v">1985</div><div class="vsub"><span class="lng-en">Japan</span><span class="lng-jp">日本</span></div></div>
+      <div class="cell reveal"><div class="micro"><span class="lng-en">Practice</span><span class="lng-jp">実践</span></div><div class="v"><span class="lng-en">Painting</span><span class="lng-jp">絵画</span></div><div class="vsub"><span class="lng-en">Abstraction</span><span class="lng-jp">抽象</span></div></div>
+      <div class="cell reveal"><div class="micro"><span class="lng-en">Based</span><span class="lng-jp">拠点</span></div><div class="v"><span class="lng-en">Japan / US</span><span class="lng-jp">日本 / アメリカ</span></div><div class="vsub"><span class="lng-en">Between two studios</span><span class="lng-jp">二つのスタジオを行き来して</span></div></div>
+      <div class="cell reveal"><div class="micro"><span class="lng-en">Medium</span><span class="lng-jp">素材</span></div><div class="v"><span class="lng-en">Acrylic, oil</span><span class="lng-jp">アクリル、油彩</span></div><div class="vsub"><span class="lng-en">Layered fields of color</span><span class="lng-jp">重なり合う色の場</span></div></div>
+    </div>
+  </section>
+
+  <!-- CLOSING PLATE -->
+  <section class="closeplate">
+    <div class="bleed" data-parallax="0.14"><img src="art/p8.webp" alt="Untitled — The Color of Silence" /></div>
+    <div class="vignette"></div><div class="scrim-b"></div>
+    <div class="meta reveal">
+      <span class="pl"><span class="lng-en">The Color of Silence</span><span class="lng-jp">沈黙の色彩</span></span>
+      <h2>
+        <span class="lng-en">Painting is not representation, but an emergence from an open field.</span>
+        <span class="lng-jp">絵画は表現ではなく、この開かれた場から生まれ出るものです。</span>
+      </h2>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="inner">
+    <div class="top">
+      <div>
+        <div class="big reveal"><span class="lng-en">Let's begin<br />a conversation.</span><span class="lng-jp">対話を、<br />始めましょう。</span></div>
+        <a class="cta reveal" href="mailto:studio@watanabetakuma.com"><span class="ln"></span> studio@watanabetakuma.com</a>
+      </div>
+      <div class="col reveal">
+        <div class="micro"><span class="lng-en">Index</span><span class="lng-jp">ページ</span></div>
+        <a href="index.html"><span class="lng-en">Home</span><span class="lng-jp">ホーム</span></a>
+        <a href="works.html"><span class="lng-en">Works</span><span class="lng-jp">作品</span></a>
+        <a href="projects.html"><span class="lng-en">Projects</span><span class="lng-jp">プロジェクト</span></a>
+        <a href="concept.html"><span class="lng-en">Concept</span><span class="lng-jp">コンセプト</span></a>
+      </div>
+      <div class="col reveal">
+        <div class="micro"><span class="lng-en">Connect</span><span class="lng-jp">コンタクト</span></div>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:studio@watanabetakuma.com"><span class="lng-en">Email</span><span class="lng-jp">メール</span></a>
+        <a href="https://www.watanabetakuma.com" target="_blank" rel="noopener">watanabetakuma.com</a>
+      </div>
+    </div>
+    <div class="base">
+      <span>© 2025 Takuma Watanabe</span>
+      <span><span class="lng-en">渡辺琢真 — Painting as living light</span><span class="lng-jp">渡辺琢真 ― 絵画は、生きた光として</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

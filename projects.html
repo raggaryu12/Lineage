@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Projects — Takuma Watanabe</title>
+<script>try{if((localStorage.getItem('tw-lang')||'en')==='jp')document.documentElement.classList.add('lang-jp');}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Archivo+Expanded:wght@200;300;400&family=Hanken+Grotesk:wght@300;400;500&family=Noto+Sans+JP:wght@200;300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css" />
+<style>
+  .pagehead{padding:26vh var(--pad) 14vh;max-width:var(--maxw);margin:0 auto}
+  .pagehead .micro{margin-bottom:26px}
+  .pagehead h1{font-family:var(--display);font-weight:200;font-size:clamp(46px,8vw,120px);line-height:0.92;letter-spacing:-0.02em}
+  .pagehead h1 .lng-jp{font-weight:200;letter-spacing:0.04em}
+  .pagehead p{max-width:48ch;margin-top:32px;font-size:clamp(15px,1.5vw,19px);line-height:1.75;color:var(--ink-mute)}
+  .pagehead p .lng-jp{line-height:2}
+
+  .proj{position:relative;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;border-top:1px solid var(--line)}
+  .proj .img{position:relative;overflow:hidden;min-height:60vh}
+  .proj .img .bleed{inset:-8% 0}
+  .proj .img .vg{position:absolute;inset:0;z-index:2;pointer-events:none;
+    background:radial-gradient(120% 120% at 50% 50%,transparent 60%,rgba(8,7,6,.5))}
+  .proj .body{display:flex;flex-direction:column;justify-content:center;padding:clamp(48px,8vh,120px) var(--pad);border-left:1px solid var(--line)}
+  .proj.flip{grid-template-columns:1fr 1fr}
+  .proj.flip .img{order:2;border-left:1px solid var(--line)}
+  .proj.flip .body{order:1;border-left:0}
+  .proj .body .num{font-family:var(--display);font-size:12px;letter-spacing:.24em;color:var(--ink-faint);margin-bottom:30px}
+  .proj .body .cat{display:block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:18px}
+  .proj .body .cat .lng-jp{font-family:"Noto Sans JP",var(--sans);letter-spacing:.14em}
+  .proj .body h2{font-family:var(--display);font-weight:200;font-size:clamp(30px,3.6vw,56px);line-height:1.02;letter-spacing:-0.018em;margin-bottom:10px}
+  .proj .body h2 .lng-jp{font-family:"Noto Sans JP",var(--sans);font-weight:200}
+  .proj .body .yr{font-family:var(--display);font-size:15px;letter-spacing:.1em;color:var(--ink-mute);margin-bottom:34px}
+  .proj .body p{max-width:42ch;font-size:15px;line-height:1.85;color:var(--ink-mute);margin-bottom:20px}
+  .proj .body p .lng-jp{line-height:2.05}
+  .proj .body .place{margin-top:14px;font-size:12.5px;letter-spacing:.06em;color:var(--ink-faint)}
+
+  @media(max-width:880px){
+    .proj,.proj.flip{grid-template-columns:1fr}
+    .proj .img{min-height:64vh;order:1!important}
+    .proj .body{order:2!important;border-left:0;border-top:1px solid var(--line)}
+    .proj.flip .img{border-left:0}
+  }
+</style>
+</head>
+<body class="page-projects">
+
+<header class="nav" id="nav">
+  <a class="wordmark" href="index.html">Takuma Watanabe<span class="jp">渡辺琢真</span></a>
+  <div class="nav-right">
+    <nav class="nav-links">
+      <a href="index.html"><span class="lng-en">Home</span><span class="lng-jp">ホーム</span></a>
+      <a href="works.html"><span class="lng-en">Works</span><span class="lng-jp">作品</span></a>
+      <a href="projects.html" aria-current="page"><span class="lng-en">Projects</span><span class="lng-jp">プロジェクト</span></a>
+      <a href="concept.html"><span class="lng-en">Concept</span><span class="lng-jp">コンセプト</span></a>
+      <a href="about.html"><span class="lng-en">About</span><span class="lng-jp">について</span></a>
+    </nav>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" data-setlang="en" class="on">EN</button>
+      <span class="sep">/</span>
+      <button type="button" data-setlang="jp">JP</button>
+    </div>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="pagehead">
+    <span class="micro"><span class="lng-en">Projects · Exhibitions & Public Art</span><span class="lng-jp">プロジェクト ・ 展覧会とパブリックアート</span></span>
+    <h1><span class="lng-en">Projects</span><span class="lng-jp">プロジェクト</span></h1>
+    <p>
+      <span class="lng-en">Where the work meets the world — solo exhibitions and public commissions in which painting becomes an environment, and perception unfolds in shared space.</span>
+      <span class="lng-jp">作品が世界と出会う場所——絵画が環境となり、共有された空間のなかで知覚がほどけてゆく、個展とパブリックコミッション。</span>
+    </p>
+  </section>
+
+  <!-- 01 PUBLIC ART -->
+  <section class="proj">
+    <div class="img">
+      <div class="bleed" data-parallax="0.12"><img src="art/proj-public.webp" alt="Public Art — COTRA mural" /></div>
+      <div class="vg"></div>
+    </div>
+    <div class="body reveal">
+      <div class="num">01 / 03</div>
+      <span class="cat"><span class="lng-en">Public Art</span><span class="lng-jp">パブリックアート</span></span>
+      <h2><span class="lng-en">COTRA Mural</span><span class="lng-jp">COTRA 壁画</span></h2>
+      <div class="yr"><span class="lng-en">Commission</span><span class="lng-jp">コミッション</span></div>
+      <p>
+        <span class="lng-en">A large-scale exterior wall in which the accumulated field of color meets the scale of the street. The painting becomes architecture — light and weather moving across it through the day.</span>
+        <span class="lng-jp">堆積した色の場が、街路のスケールと出会う大規模な外壁。絵画は建築となり——光と天候が一日を通してその表面を移ろってゆく。</span>
+      </p>
+      <div class="place"><span class="lng-en">Permanent public commission</span><span class="lng-jp">恒久設置のパブリックコミッション</span></div>
+    </div>
+  </section>
+
+  <!-- 02 2023 SOLO -->
+  <section class="proj flip">
+    <div class="img">
+      <div class="bleed" data-parallax="0.12"><img src="art/proj-2023.webp" alt="DAY DREAM — 2023 Solo Exhibition" /></div>
+      <div class="vg"></div>
+    </div>
+    <div class="body reveal">
+      <div class="num">02 / 03</div>
+      <span class="cat"><span class="lng-en">Solo Exhibition</span><span class="lng-jp">個展</span></span>
+      <h2><span class="lng-en">DAY DREAM</span><span class="lng-jp">デイドリーム</span></h2>
+      <div class="yr"><span class="lng-en">2023</span><span class="lng-jp">2023年</span></div>
+      <p>
+        <span class="lng-en">A solo presentation of the DAY DREAM series — soft fields of accumulated color held at the threshold of recognition, where the seen and the half-remembered exchange places.</span>
+        <span class="lng-jp">デイドリーム シリーズの個展——堆積した色のやわらかな場が認識の閾（しきい）にとどまり、見えるものと半ば思い出されるものとが入れ替わる。</span>
+      </p>
+      <div class="place"><span class="lng-en">Solo exhibition, 2023</span><span class="lng-jp">個展、2023年</span></div>
+    </div>
+  </section>
+
+  <!-- 03 2021 SOLO -->
+  <section class="proj">
+    <div class="img">
+      <div class="bleed" data-parallax="0.12"><img src="art/proj-2021.webp" alt="2021 Solo Exhibition" /></div>
+      <div class="vg"></div>
+    </div>
+    <div class="body reveal">
+      <div class="num">03 / 03</div>
+      <span class="cat"><span class="lng-en">Solo Exhibition</span><span class="lng-jp">個展</span></span>
+      <h2><span class="lng-en">Fields of Color</span><span class="lng-jp">色の場</span></h2>
+      <div class="yr"><span class="lng-en">2021</span><span class="lng-jp">2021年</span></div>
+      <p>
+        <span class="lng-en">An installation of small-scale works hung as a single constellation — each panel a discrete duration, together forming one continuous field of perception across the wall.</span>
+        <span class="lng-jp">小品を一つの星座のように掛けたインスタレーション——それぞれのパネルが固有の時間であり、壁面全体で一つの連続した知覚の場を形づくる。</span>
+      </p>
+      <div class="place"><span class="lng-en">Solo exhibition, 2021</span><span class="lng-jp">個展、2021年</span></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="inner">
+    <div class="top">
+      <div>
+        <div class="big reveal"><span class="lng-en">Enquire about<br />a commission.</span><span class="lng-jp">コミッションの<br />お問い合わせ。</span></div>
+        <a class="cta reveal" href="about.html"><span class="ln"></span> <span class="lng-en">About & contact</span><span class="lng-jp">プロフィールと連絡先</span></a>
+      </div>
+      <div class="col reveal">
+        <div class="micro"><span class="lng-en">Index</span><span class="lng-jp">ページ</span></div>
+        <a href="index.html"><span class="lng-en">Home</span><span class="lng-jp">ホーム</span></a>
+        <a href="works.html"><span class="lng-en">Works</span><span class="lng-jp">作品</span></a>
+        <a href="concept.html"><span class="lng-en">Concept</span><span class="lng-jp">コンセプト</span></a>
+        <a href="about.html"><span class="lng-en">About</span><span class="lng-jp">について</span></a>
+      </div>
+      <div class="col reveal">
+        <div class="micro"><span class="lng-en">Connect</span><span class="lng-jp">コンタクト</span></div>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:studio@watanabetakuma.com"><span class="lng-en">Email</span><span class="lng-jp">メール</span></a>
+        <a href="https://www.watanabetakuma.com" target="_blank" rel="noopener">watanabetakuma.com</a>
+      </div>
+    </div>
+    <div class="base">
+      <span>© 2025 Takuma Watanabe</span>
+      <span><span class="lng-en">渡辺琢真 — Painting as living light</span><span class="lng-jp">渡辺琢真 ― 絵画は、生きた光として</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

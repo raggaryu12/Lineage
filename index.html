@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Takuma Watanabe — Painting as Living Light</title>
+<meta name="description" content="Takuma Watanabe (b. 1985) is a Japanese abstract painter exploring light as a lived dimension of perception." />
+<script>try{if((localStorage.getItem('tw-lang')||'en')==='jp')document.documentElement.classList.add('lang-jp');}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Archivo+Expanded:wght@200;300;400&family=Hanken+Grotesk:wght@300;400;500&family=Noto+Sans+JP:wght@200;300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css" />
+<style>
+  /* HERO */
+  .hero{position:relative;height:100vh;min-height:600px;overflow:hidden}
+  .hero .htext{position:absolute;z-index:4;left:var(--pad);right:var(--pad);bottom:clamp(46px,10vh,120px)}
+  .hero h1{font-family:var(--display);font-weight:200;font-size:clamp(46px,9.4vw,150px);line-height:0.9;letter-spacing:-0.02em}
+  .hero h1 .lng-jp{font-weight:200;letter-spacing:0.02em}
+  .hero .tag{margin-top:30px;max-width:38ch;font-size:clamp(15px,1.6vw,21px);line-height:1.7;color:var(--ink)}
+  .hero .tag .mute{color:var(--ink-mute)}
+  .hero .tag .lng-jp{line-height:1.9}
+
+  /* INTRO */
+  .intro{position:relative;padding:24vh var(--pad);text-align:center;overflow:hidden}
+  .intro .glow{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:120vw;height:86vh;z-index:0;
+    background:radial-gradient(ellipse 38% 44% at 50% 50%,rgba(201,162,75,0.14),rgba(150,100,50,0.045) 42%,transparent 66%);filter:blur(24px)}
+  .intro .inner{position:relative;z-index:2;max-width:880px;margin:0 auto}
+  .intro p{font-family:var(--display);font-weight:200;font-size:clamp(26px,4vw,56px);line-height:1.18;letter-spacing:-0.02em}
+  .intro p .mute{color:var(--ink-mute)}
+  .intro .em{color:var(--ink)}
+  .intro p .lng-jp{line-height:1.5}
+
+  /* FEATURED PLATE */
+  .plate{position:relative;height:110vh;min-height:560px;overflow:hidden;display:flex;align-items:flex-end}
+  .plate .meta{position:relative;z-index:4;padding:0 var(--pad) clamp(44px,8vh,88px);width:100%;
+    display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+  .plate.right .meta{flex-direction:row-reverse;text-align:right}
+  .plate .meta .pl{font-family:var(--display);font-size:11.5px;letter-spacing:.24em;color:var(--ink-mute);margin-bottom:16px;display:block}
+  .plate .meta h2{font-family:var(--display);font-weight:200;font-size:clamp(28px,4.6vw,66px);line-height:0.98;letter-spacing:-0.015em}
+  .plate .meta .dim{font-size:13px;color:var(--ink-mute);max-width:24ch;line-height:1.6}
+
+  /* BODIES OF WORK */
+  .bodies{padding:15vh var(--pad) 12vh;max-width:var(--maxw);margin:0 auto}
+  .bodies .shead{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:6vh;gap:18px;flex-wrap:wrap}
+  .bodies .shead h2{font-family:var(--display);font-weight:300;font-size:clamp(24px,3vw,40px);letter-spacing:-0.01em}
+  .series-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2.4vw,40px)}
+  a.series{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;border:1px solid var(--line-soft);transition:border-color .5s}
+  a.series:hover{border-color:var(--line)}
+  a.series img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+  a.series:hover img{transform:scale(1.04)}
+  a.series .ov{position:absolute;inset:0;z-index:2;background:linear-gradient(to top,rgba(8,7,6,.8),transparent 58%)}
+  a.series .lab{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:26px clamp(20px,2.4vw,32px);display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+  a.series .lab h3{font-family:var(--display);font-weight:300;font-size:clamp(19px,1.9vw,26px);letter-spacing:-0.01em}
+  a.series .lab h3 .lng-jp{font-family:"Noto Sans JP",var(--sans);font-weight:300}
+  a.series .lab .n{font-size:11.5px;letter-spacing:.2em;color:var(--ink-mute);text-transform:uppercase}
+  a.series .arrow{position:absolute;top:24px;right:24px;z-index:3;width:30px;height:30px;opacity:0;transform:translateY(-6px);transition:.5s}
+  a.series:hover .arrow{opacity:1;transform:none}
+  a.series .arrow svg{width:100%;height:100%;stroke:var(--ink);fill:none;stroke-width:1}
+
+  /* CONCEPT TEASER */
+  .ctease{position:relative;padding:20vh var(--pad);overflow:hidden;border-top:1px solid var(--line)}
+  .ctease .inner{position:relative;z-index:2;max-width:1000px;margin:0 auto;text-align:center}
+  .ctease .micro{margin-bottom:36px}
+  .ctease p{font-family:var(--display);font-weight:200;font-size:clamp(24px,3.4vw,46px);line-height:1.24;letter-spacing:-0.018em}
+  .ctease p .mute{color:var(--ink-mute)}
+  .ctease p .lng-jp{line-height:1.5}
+  .ctease .cta{display:inline-flex;align-items:center;gap:12px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;margin-top:48px}
+  .ctease .cta .ln{width:30px;height:1px;background:var(--ink);transition:width .45s}
+  .ctease .cta:hover .ln{width:54px}
+
+  @media(max-width:820px){
+    .series-grid{grid-template-columns:1fr}
+    .plate{height:86vh}
+    .plate .meta{flex-direction:column;align-items:flex-start;text-align:left}
+    .plate.right .meta{flex-direction:column;text-align:left}
+  }
+</style>
+</head>
+<body class="page-home">
+
+<header class="nav" id="nav">
+  <a class="wordmark" href="index.html">Takuma Watanabe<span class="jp">渡辺琢真</span></a>
+  <div class="nav-right">
+    <nav class="nav-links">
+      <a href="index.html" aria-current="page"><span class="lng-en">Home</span><span class="lng-jp">ホーム</span></a>
+      <a href="works.html"><span class="lng-en">Works</span><span class="lng-jp">作品</span></a>
+      <a href="projects.html"><span class="lng-en">Projects</span><span class="lng-jp">プロジェクト</span></a>
+      <a href="concept.html"><span class="lng-en">Concept</span><span class="lng-jp">コンセプト</span></a>
+      <a href="about.html"><span class="lng-en">About</span><span class="lng-jp">について</span></a>
+    </nav>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" data-setlang="en" class="on">EN</button>
+      <span class="sep">/</span>
+      <button type="button" data-setlang="jp">JP</button>
+    </div>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="bleed" data-parallax="0.2"><img src="art/hero.webp" alt="Untitled — The Color of Silence, acrylic on canvas" /></div>
+    <div class="vignette"></div>
+    <div class="scrim-full"></div>
+    <div class="htext">
+      <h1><span class="lng-en">Takuma<br />Watanabe</span><span class="lng-jp">渡辺<br />琢真</span></h1>
+      <p class="tag">
+        <span class="lng-en">Painting as living light. <span class="mute">A field where silence breathes through time, crossing the conscious and the unseen.</span></span>
+        <span class="lng-jp">絵画は、生きた光として。<span class="mute">沈黙が時間を通して息づく場、意識と見えざるものが交差するところ。</span></span>
+      </p>
+    </div>
+    <div class="scrollcue"><span class="micro"><span class="lng-en">Scroll</span><span class="lng-jp">スクロール</span></span><span class="ln"></span></div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="glow"></div>
+    <div class="inner">
+      <p class="reveal">
+        <span class="lng-en"><span class="em">Light is not illumination.</span> <span class="mute">It is a field in which silence, breath, and time accumulate — and perception itself begins to unfold.</span></span>
+        <span class="lng-jp"><span class="em">光とは、照明ではありません。</span><span class="mute">それは沈黙と息吹、そして時間が積層する場——知覚そのものが展開しはじめる場所です。</span></span>
+      </p>
+    </div>
+  </section>
+
+  <!-- FEATURED PLATE 01 -->
+  <section class="plate">
+    <div class="bleed" data-parallax="0.16"><img src="art/p1.webp" alt="Untitled — The Color of Silence" /></div>
+    <div class="vignette"></div>
+    <div class="scrim-b"></div>
+    <div class="meta reveal">
+      <div>
+        <span class="pl"><span class="lng-en">The Color of Silence</span><span class="lng-jp">沈黙の色彩</span></span>
+        <h2><span class="lng-en">Untitled, 2025</span><span class="lng-jp">無題, 2025</span></h2>
+      </div>
+      <div class="dim">
+        <span class="lng-en">Acrylic on canvas<br />60 × 48 in</span>
+        <span class="lng-jp">アクリル、キャンバス<br />60 × 48 in</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PLATE 02 -->
+  <section class="plate right">
+    <div class="bleed" data-parallax="0.16"><img src="art/archives.webp" alt="Untitled — Archives" /></div>
+    <div class="vignette"></div>
+    <div class="scrim-b"></div>
+    <div class="meta reveal">
+      <div>
+        <span class="pl"><span class="lng-en">Archives</span><span class="lng-jp">アーカイブ</span></span>
+        <h2><span class="lng-en">Untitled</span><span class="lng-jp">無題</span></h2>
+      </div>
+      <div class="dim">
+        <span class="lng-en">Acrylic on canvas<br />Selected archive</span>
+        <span class="lng-jp">アクリル、キャンバス<br />アーカイブより</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BODIES OF WORK -->
+  <section class="bodies">
+    <div class="shead reveal">
+      <h2><span class="lng-en">Four bodies of work</span><span class="lng-jp">作品について</span></h2>
+      <a class="micro" href="works.html" style="opacity:.8"><span class="lng-en">View all works →</span><span class="lng-jp">すべての作品を見る →</span></a>
+    </div>
+    <div class="series-grid">
+      <a class="series reveal" href="works.html#color-of-silence">
+        <img src="art/p6.webp" alt="The Color of Silence" />
+        <div class="ov"></div>
+        <span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg></span>
+        <div class="lab"><h3><span class="lng-en">The Color of Silence</span><span class="lng-jp">沈黙の色彩</span></h3><span class="n">01</span></div>
+      </a>
+      <a class="series reveal" href="works.html#day-dream">
+        <img src="art/daydream.webp" alt="DAY DREAM" />
+        <div class="ov"></div>
+        <span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg></span>
+        <div class="lab"><h3><span class="lng-en">DAY DREAM</span><span class="lng-jp">デイドリーム</span></h3><span class="n">02</span></div>
+      </a>
+      <a class="series reveal" href="works.html#portrait-in-art">
+        <img src="art/portrait-art.webp" alt="Portrait in Art" />
+        <div class="ov"></div>
+        <span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg></span>
+        <div class="lab"><h3><span class="lng-en">Portrait in Art</span><span class="lng-jp">アート内の肖像</span></h3><span class="n">03</span></div>
+      </a>
+      <a class="series reveal" href="works.html#archives">
+        <img src="art/archives.webp" alt="Archives" />
+        <div class="ov"></div>
+        <span class="arrow"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5H8M19 5V16"/></svg></span>
+        <div class="lab"><h3><span class="lng-en">Archives</span><span class="lng-jp">アーカイブ</span></h3><span class="n">04</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONCEPT TEASER -->
+  <section class="ctease">
+    <div class="inner">
+      <div class="micro reveal"><span class="lng-en">Concept</span><span class="lng-jp">コンセプト</span></div>
+      <p class="reveal">
+        <span class="lng-en">My paintings begin <span class="mute">not with answers,</span> but with questions — painting as a living relationship <span class="mute">rather than a fixed object.</span></span>
+        <span class="lng-jp">私の絵画は、答えからではなく、<span class="mute">問いから始まります</span>——固定された物体ではなく、<span class="mute">生きた関係としての絵画。</span></span>
+      </p>
+      <a class="cta reveal" href="concept.html"><span class="ln"></span> <span class="lng-en">Read the concept</span><span class="lng-jp">コンセプトを読む</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="inner">
+    <div class="top">
+      <div>
+        <div class="big reveal"><span class="lng-en">Painting as<br />living light.</span><span class="lng-jp">絵画は、<br />生きた光として。</span></div>
+        <a class="cta reveal" href="about.html"><span class="ln"></span> <span class="lng-en">About the artist</span><span class="lng-jp">作家について</span></a>
+      </div>
+      <div class="col reveal">
+        <div class="micro"><span class="lng-en">Index</span><span class="lng-jp">ページ</span></div>
+        <a href="works.html"><span class="lng-en">Works</span><span class="lng-jp">作品</span></a>
+        <a href="projects.html"><span class="lng-en">Projects</span><span class="lng-jp">プロジェクト</span></a>
+        <a href="concept.html"><span class="lng-en">Concept</span><span class="lng-jp">コンセプト</span></a>
+        <a href="about.html"><span class="lng-en">About</span><span class="lng-jp">について</span></a>
+      </div>
+      <div class="col reveal">
+        <div class="micro"><span class="lng-en">Connect</span><span class="lng-jp">コンタクト</span></div>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:studio@watanabetakuma.com"><span class="lng-en">Email</span><span class="lng-jp">メール</span></a>
+        <a href="https://www.watanabetakuma.com" target="_blank" rel="noopener">watanabetakuma.com</a>
+      </div>
+    </div>
+    <div class="base">
+      <span>© 2025 Takuma Watanabe</span>
+      <span><span class="lng-en">渡辺琢真 — Painting as living light</span><span class="lng-jp">渡辺琢真 ― 絵画は、生きた光として</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

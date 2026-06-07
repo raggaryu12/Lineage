@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Concept — Takuma Watanabe</title>
+<script>try{if((localStorage.getItem('tw-lang')||'en')==='jp')document.documentElement.classList.add('lang-jp');}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Archivo+Expanded:wght@200;300;400&family=Hanken+Grotesk:wght@300;400;500&family=Noto+Sans+JP:wght@200;300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css" />
+<style>
+  .open{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;padding:20vh var(--pad) 12vh}
+  .open .glow{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:120vw;height:96vh;z-index:0;
+    background:radial-gradient(ellipse 40% 46% at 50% 50%,rgba(201,162,75,0.13),rgba(150,100,50,0.04) 44%,transparent 66%);filter:blur(26px)}
+  .open .inner{position:relative;z-index:2;max-width:1080px;margin:0 auto;width:100%}
+  .open .micro{margin-bottom:40px}
+  .open h1{font-family:var(--display);font-weight:200;font-size:clamp(30px,4.6vw,66px);line-height:1.16;letter-spacing:-0.02em;max-width:20ch}
+  .open h1 .mute{color:var(--ink-mute)}
+  .open h1 .lng-jp{font-family:"Noto Sans JP",var(--sans);font-weight:200;line-height:1.5;letter-spacing:0.01em}
+
+  .statement{max-width:760px;margin:0 auto;padding:8vh var(--pad) 16vh}
+  .statement p{font-size:clamp(17px,1.65vw,22px);line-height:1.95;color:var(--ink);margin-bottom:2.1em;font-weight:300}
+  .statement p .mute{color:var(--ink-mute)}
+  .statement p .lng-jp{line-height:2.15}
+  .statement .lead{font-family:var(--display);font-weight:200;font-size:clamp(22px,2.6vw,34px);line-height:1.4;letter-spacing:-0.01em;color:var(--ink)}
+  .statement .lead .lng-jp{font-family:"Noto Sans JP",var(--sans);font-weight:200;line-height:1.7}
+
+  .interlude{position:relative;height:96vh;min-height:520px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .interlude .vignette2{position:absolute;inset:0;z-index:2;pointer-events:none;
+    background:radial-gradient(120% 110% at 50% 50%,rgba(8,7,6,.4) 28%,rgba(8,7,6,.76) 84%)}
+  .interlude .q{position:relative;z-index:3;max-width:900px;text-align:center;padding:0 var(--pad)}
+  .interlude .q p{font-family:var(--display);font-weight:200;font-size:clamp(26px,4vw,56px);line-height:1.2;letter-spacing:-0.02em;color:#fff;text-shadow:0 2px 40px rgba(0,0,0,.5)}
+  .interlude .q p .lng-jp{font-family:"Noto Sans JP",var(--sans);font-weight:200;line-height:1.5}
+
+  .closing{max-width:760px;margin:0 auto;padding:14vh var(--pad)}
+  .closing p{font-size:clamp(17px,1.65vw,22px);line-height:1.95;color:var(--ink);margin-bottom:2.1em;font-weight:300}
+  .closing p .lng-jp{line-height:2.15}
+  .closing .big{font-family:var(--display);font-weight:200;font-size:clamp(24px,3vw,40px);line-height:1.32;letter-spacing:-0.015em;color:var(--ink)}
+  .closing .big .mute{color:var(--ink-mute)}
+  .closing .big .lng-jp{font-family:"Noto Sans JP",var(--sans);font-weight:200;line-height:1.6}
+</style>
+</head>
+<body class="page-concept">
+
+<header class="nav" id="nav">
+  <a class="wordmark" href="index.html">Takuma Watanabe<span class="jp">渡辺琢真</span></a>
+  <div class="nav-right">
+    <nav class="nav-links">
+      <a href="index.html"><span class="lng-en">Home</span><span class="lng-jp">ホーム</span></a>
+      <a href="works.html"><span class="lng-en">Works</span><span class="lng-jp">作品</span></a>
+      <a href="projects.html"><span class="lng-en">Projects</span><span class="lng-jp">プロジェクト</span></a>
+      <a href="concept.html" aria-current="page"><span class="lng-en">Concept</span><span class="lng-jp">コンセプト</span></a>
+      <a href="about.html"><span class="lng-en">About</span><span class="lng-jp">について</span></a>
+    </nav>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" data-setlang="en" class="on">EN</button>
+      <span class="sep">/</span>
+      <button type="button" data-setlang="jp">JP</button>
+    </div>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- OPENING -->
+  <section class="open">
+    <div class="glow"></div>
+    <div class="inner">
+      <div class="micro reveal"><span class="lng-en">Concept</span><span class="lng-jp">コンセプト</span></div>
+      <h1 class="reveal">
+        <span class="lng-en">My paintings begin <span class="mute">not with answers,</span> but with questions.</span>
+        <span class="lng-jp">私の絵画は、<span class="mute">答えからではなく、</span>問いから始まります。</span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="statement">
+    <p class="lead reveal">
+      <span class="lng-en">I am interested in how painting can move beyond image and become an experience. Rather than describing the world, I seek to create a space where perception itself can unfold.</span>
+      <span class="lng-jp">絵画がイメージを超え、体験そのものになりうることに、私は関心を持っています。世界を描写するのではなく、知覚そのものが展開できる空間をつくりたい。</span>
+    </p>
+    <p class="reveal">
+      <span class="lng-en">Light, color, silence, and time are not subjects in my work, but conditions through which awareness emerges. <span class="mute">Through layered fields of color, accumulation, erasure, and repetition, I explore painting as a living relationship rather than a fixed object.</span></span>
+      <span class="lng-jp">光、色、沈黙、時間——これらは作品のテーマではなく、気づきが生まれてくる条件です。<span class="mute">色彩の重なりと蓄積、消去と反復を通じて、固定された物体としてではなく、生きた関係としての絵画を探求しています。</span></span>
+    </p>
+    <p class="reveal">
+      <span class="lng-en">Color is treated not simply as material, but as a temporal presence — something that drifts, dissolves, returns, and continues to transform through perception.</span>
+      <span class="lng-jp">色は単なるマテリアルではなく、時間的な存在として扱われます——知覚を通じて漂い、溶け、還り、変容し続けるもの。</span>
+    </p>
+  </section>
+
+  <!-- INTERLUDE -->
+  <section class="interlude">
+    <div class="bleed" data-parallax="0.16"><img src="art/p6.webp" alt="Untitled — layered field of color" /></div>
+    <div class="vignette2"></div>
+    <div class="q reveal">
+      <p>
+        <span class="lng-en">Between light and darkness, presence and absence, the conscious and the unconscious.</span>
+        <span class="lng-jp">光と闇、存在と不在、意識と無意識の間で。</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <p class="reveal">
+      <span class="lng-en">My practice unfolds through dialogue: between light and darkness, presence and absence, the conscious and the unconscious. I do not seek definitive meanings.</span>
+      <span class="lng-jp">私の実践は対話の中で展開します。光と闇、存在と不在、意識と無意識の間で。私は確定的な意味を求めません。</span>
+    </p>
+    <p class="big reveal">
+      <span class="lng-en">The moment a conclusion is fixed, <span class="mute">the world becomes smaller.</span> Instead, I am interested in questions that remain open and continue to expand.</span>
+      <span class="lng-jp">結論が固定された瞬間、<span class="mute">世界は小さくなる。</span>むしろ、開かれたまま拡張し続ける問いに、私は関心を持っています。</span>
+    </p>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="inner">
+    <div class="top">
+      <div>
+        <div class="big reveal"><span class="lng-en">Questions that<br />continue to expand.</span><span class="lng-jp">拡張し続ける、<br />問い。</span></div>
+        <a class="cta reveal" href="works.html"><span class="ln"></span> <span class="lng-en">See the work</span><span class="lng-jp">作品を見る</span></a>
+      </div>
+      <div class="col reveal">
+        <div class="micro"><span class="lng-en">Index</span><span class="lng-jp">ページ</span></div>
+        <a href="index.html"><span class="lng-en">Home</span><span class="lng-jp">ホーム</span></a>
+        <a href="works.html"><span class="lng-en">Works</span><span class="lng-jp">作品</span></a>
+        <a href="projects.html"><span class="lng-en">Projects</span><span class="lng-jp">プロジェクト</span></a>
+        <a href="about.html"><span class="lng-en">About</span><span class="lng-jp">について</span></a>
+      </div>
+      <div class="col reveal">
+        <div class="micro"><span class="lng-en">Connect</span><span class="lng-jp">コンタクト</span></div>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:studio@watanabetakuma.com"><span class="lng-en">Email</span><span class="lng-jp">メール</span></a>
+        <a href="https://www.watanabetakuma.com" target="_blank" rel="noopener">watanabetakuma.com</a>
+      </div>
+    </div>
+    <div class="base">
+      <span>© 2025 Takuma Watanabe</span>
+      <span><span class="lng-en">渡辺琢真 — Painting as living light</span><span class="lng-jp">渡辺琢真 ― 絵画は、生きた光として</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
