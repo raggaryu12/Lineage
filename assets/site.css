@@ -80,12 +80,9 @@ html.lang-jp .lng-jp{display:revert}
 /* ---------- FULL-BLEED PLATE ---------- */
 .bleed{position:absolute;inset:-10% 0;will-change:transform}
 .bleed img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.vignette{position:absolute;inset:0;z-index:2;pointer-events:none;
-  background:radial-gradient(125% 110% at 50% 44%,transparent 46%,rgba(8,7,6,.62) 82%,rgba(8,7,6,.86) 100%);}
-.scrim-b{position:absolute;inset:0;z-index:2;pointer-events:none;
-  background:linear-gradient(to top,rgba(8,7,6,.86),rgba(8,7,6,.05) 46%);}
-.scrim-full{position:absolute;inset:0;z-index:2;pointer-events:none;
-  background:linear-gradient(to bottom,rgba(8,7,6,.5),rgba(8,7,6,.06) 30%,rgba(8,7,6,.16) 60%,rgba(8,7,6,.9));}
+.vignette{display:none}
+.scrim-b{display:none}
+.scrim-full{display:none}
 
 /* ---------- FOOTER ---------- */
 .foot{border-top:1px solid var(--line);padding:9vh var(--pad) 6vh;background:var(--bg)}
